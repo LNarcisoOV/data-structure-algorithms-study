@@ -1,5 +1,7 @@
 package com.datastructuresandalgorithms.linkedlist;
 
+import com.datastructuresandalgorithms.model.Node;
+
 public class SinglyLinkedList<E> {
 
 	// instance variables of the SinglyLinkedList
@@ -9,7 +11,6 @@ public class SinglyLinkedList<E> {
 
 	public SinglyLinkedList() {
 	} // constructs an initially empty list
-		// access methods
 
 	public int size() {
 		return size;
@@ -59,33 +60,6 @@ public class SinglyLinkedList<E> {
 		if (size == 0)
 			tail = null; // special case as list is now empty
 		return answer;
-	}
-
-	private static class Node<E> {
-		private E element;
-		private Node<E> next;
-
-		public Node(E e, Node<E> n) {
-			element = e;
-			next = n;
-		}
-
-		public E getElement() {
-			return element;
-		}
-
-		public void setElement(E e) {
-			this.element = e;
-		}
-
-		public Node<E> getNext() {
-			return next;
-		}
-
-		public void setNext(Node<E> n) {
-			this.next = n;
-		}
-
 	}
 
 }
