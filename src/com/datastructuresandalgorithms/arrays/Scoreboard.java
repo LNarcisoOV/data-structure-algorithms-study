@@ -1,6 +1,4 @@
-package com.datastructuresandalgorithms.impl;
-
-import com.datastructuresandalgorithms.model.GameEntry;
+package com.datastructuresandalgorithms.arrays;
 
 public class Scoreboard {
 	private int numEntries = 0; // number of actual entries

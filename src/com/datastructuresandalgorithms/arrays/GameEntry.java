@@ -1,4 +1,4 @@
-package com.datastructuresandalgorithms.model;
+package com.datastructuresandalgorithms.arrays;
 
 public class GameEntry {
 	private String name; // name of the person earning this score
