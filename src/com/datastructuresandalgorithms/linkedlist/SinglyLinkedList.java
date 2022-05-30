@@ -1,12 +1,12 @@
 package com.datastructuresandalgorithms.linkedlist;
 
-import com.datastructuresandalgorithms.model.Node;
+import com.datastructuresandalgorithms.model.ListNode;
 
 public class SinglyLinkedList<E> {
 
 	// instance variables of the SinglyLinkedList
-	private Node<E> head = null; // head node of the list (or null if empty)
-	private Node<E> tail = null; // last node of the list (or null if empty)
+	private ListNode<E> head = null; // head node of the list (or null if empty)
+	private ListNode<E> tail = null; // last node of the list (or null if empty)
 	private int size = 0; // number of nodes in the list
 
 	public SinglyLinkedList() {
@@ -34,14 +34,14 @@ public class SinglyLinkedList<E> {
 
 	// update methods
 	public void addFirst(E e) { // adds element e to the front of the list
-		head = new Node<>(e, head); // create and link a new node
+		head = new ListNode<>(e, head); // create and link a new node
 		if (size == 0)
 			tail = head; // special case: new node becomes tail also
 		size++;
 	}
 
 	public void addLast(E e) { // adds element e to the end of the list
-		Node<E> newest = new Node<>(e, null); // node will eventually be the
+		ListNode<E> newest = new ListNode<>(e, null); // node will eventually be the
 												// tail
 		if (isEmpty())
 			head = newest; // special case: previously empty list

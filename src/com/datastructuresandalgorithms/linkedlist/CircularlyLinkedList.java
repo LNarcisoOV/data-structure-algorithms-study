@@ -1,10 +1,10 @@
 package com.datastructuresandalgorithms.linkedlist;
 
-import com.datastructuresandalgorithms.model.Node;
+import com.datastructuresandalgorithms.model.ListNode;
 
 public class CircularlyLinkedList {
 	// instance variables of the CircularlyLinkedList
-	private Node<String> tail = null; // we store tail (but not head)
+	private ListNode<String> tail = null; // we store tail (but not head)
 	private int size = 0; // number of nodes in the list
 
 	public CircularlyLinkedList() {
@@ -39,10 +39,10 @@ public class CircularlyLinkedList {
 
 	public void addFirst(String e) { // adds element e to the front of the list
 		if (size == 0) {
-			tail = new Node<>(e, null);
+			tail = new ListNode<>(e, null);
 			tail.setNext(tail); // link to itself circularly
 		} else {
-			Node<String> newest = new Node<>(e, tail.getNext());
+			ListNode<String> newest = new ListNode<>(e, tail.getNext());
 			tail.setNext(newest);
 		}
 		size++;
@@ -56,7 +56,7 @@ public class CircularlyLinkedList {
 	public String removeFirst() { // removes and returns the first element
 		if (isEmpty())
 			return null; // nothing to remove
-		Node<String> head = tail.getNext();
+		ListNode<String> head = tail.getNext();
 		if (head == tail)
 			tail = null; // must be the only node left
 		else

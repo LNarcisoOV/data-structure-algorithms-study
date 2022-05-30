@@ -1,10 +1,10 @@
 package com.datastructuresandalgorithms.model;
 
-public class Node<E> {
+public class ListNode<E> {
 	private E element;
-	private Node<E> next;
+	private ListNode<E> next;
 
-	public Node(E e, Node<E> n) {
+	public ListNode(E e, ListNode<E> n) {
 		element = e;
 		next = n;
 	}
@@ -17,11 +17,11 @@ public class Node<E> {
 		this.element = e;
 	}
 
-	public Node<E> getNext() {
+	public ListNode<E> getNext() {
 		return next;
 	}
 
-	public void setNext(Node<E> n) {
+	public void setNext(ListNode<E> n) {
 		this.next = n;
 	}
 
